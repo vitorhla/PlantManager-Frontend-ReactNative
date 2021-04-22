@@ -4,6 +4,7 @@ import {SafeAreaView, Text, Image, TouchableOpacity, StyleSheet, Dimensions} fro
 
 import wateringImg from '../assets/watering.png';
 import colors from '../colors';
+import {Entypo} from '@expo/vector-icons';
 
 export function Welcome(){
     return(
@@ -31,7 +32,7 @@ export function Welcome(){
                 <Text 
                 style={styles.buttonText}
                 >
-                   > 
+                   <Entypo name="chevron-thin-right" /> 
                 </Text>
                 </TouchableOpacity>
                 
