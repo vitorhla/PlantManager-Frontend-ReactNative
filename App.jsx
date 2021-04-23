@@ -1,6 +1,6 @@
 import React from 'react';
-import {Text,View} from 'react-native';
 import AppLoading from 'expo-app-loading'
+import { UserIdentification } from './src/pages/UserIdentification';
 import { Welcome } from './src/pages/Welcome';
 import {
   useFonts,
@@ -15,12 +15,14 @@ export default function App() {
     Jost_600SemiBold
 
   });
+  
   if(!fontsLoaded)
     return<AppLoading />
     
 
   return (
- < Welcome />
+    //< Welcome />
+ < UserIdentification />
   )
 }
 

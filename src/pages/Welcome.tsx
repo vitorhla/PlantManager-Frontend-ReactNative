@@ -41,10 +41,8 @@ export function Welcome(){
             >
                    <Feather 
                    name="chevron-right"
-                   style = {styles.buttonIcon}
-                   
-                   /> 
-               
+                   style = {styles.buttonIcon}    
+                   />                
                 </TouchableOpacity>
                 </View>
         </SafeAreaView>
