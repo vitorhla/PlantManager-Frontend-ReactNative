@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import {
     SafeAreaView,
     StyleSheet,
@@ -13,6 +14,25 @@ import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 
 export function UserIdentification(){
+    const [isFocused, setIsFocused] = useState(false);
+    const[isFilled,setIsFilled] =  useState(false);
+    const[name,setName] = useState<string>();
+
+    function handleInputBlur(){
+       setIsFocused(false) ;
+       setIsFilled(!!name);
+    }
+
+    function handInputChange(value: string){
+        setIsFilled(!!value);
+        setName(value);
+
+    }
+
+    function handleInputFocus(){
+        setIsFocused(true);
+    }
+
      return(
         <SafeAreaView style={styles.container}>
             <KeyboardAvoidingView 
@@ -34,8 +54,13 @@ export function UserIdentification(){
 
                     </View>
                         <TextInput
-                            style = {styles.input}
+                            style = {[styles.input,
+                                        (isFocused || isFilled) && {borderColor: colors.green}
+                            ]}
                             placeholder= " Digite seu nome aqui"
+                            onBlur={handleInputBlur}
+                            onFocus={handleInputFocus}
+                            onChangeText = {handInputChange}
                         />
 
                         <View style = {styles.footer}>
