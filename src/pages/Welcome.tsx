@@ -16,6 +16,7 @@ import {Feather} from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/core';
 
 export function Welcome(){
+
     const navigation = useNavigation();
 
     function handleStart(){

@@ -10,7 +10,7 @@ import {
     KeyboardAvoidingView,
     TouchableWithoutFeedback,
     Platform,
-    Keyboard
+    Keyboard,
 }from 'react-native';
 import {Button} from '../components/Button';
 import colors from '../styles/colors';

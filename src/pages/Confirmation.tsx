@@ -1,3 +1,4 @@
+import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 import {
@@ -6,6 +7,7 @@ import {
     Text,
     View
 } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import {Button} from '../components/Button';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
@@ -14,32 +16,44 @@ export function Confirmation(){
 
     const navigation = useNavigation();
 
-    function handleHome(){
-        navigation.navigate('Welcome');
+    function handleBack(){
+        navigation.navigate('UserIdentification');
 
     }
-
 
     return(
        <SafeAreaView style={styles.container}>
            <View style= {styles.content}>
+
+           <Text style = {styles.title}>
+            Prontinho,
+            </Text>
+
             <Text style = {styles.emoji}>
-                😊
+            🌱 😊 🌱
             </Text>
-            <Text style = {styles.title}>
-            Prontinho
-            </Text>
+           
             <Text style = {styles.subtitle}>
                 Agora vamos começar a cuidar das suas 
                 plantinhas com muito cuidado.
             </Text>
 
+            <View style = {styles.footer}>
+                <Button title = "Comerçar"/>
+            </View>
             <View style ={styles.footer}>
-            <Button
-            title="Começar"
-            onPress={handleHome}
+
+            <TouchableOpacity
+            style={styles.button} 
+            activeOpacity={0.7}
+            onPress={handleBack}
+            >
+                   <Feather 
+                   name="chevron-left"
+                   style = {styles.buttonIcon}    
+                   />                
+                </TouchableOpacity>
             
-            />
             </View>
 
            </View>
@@ -72,6 +86,7 @@ const styles = StyleSheet.create({
         color: colors.heading,
         lineHeight:38,
         marginTop: 15,
+      
     },
     subtitle:{
         fontFamily: fonts.text,
@@ -83,12 +98,29 @@ const styles = StyleSheet.create({
     },
     emoji:{
         fontSize: 78,
+        
+                       
     },
     footer:{
         width: '100%',
         paddingHorizontal: 50,
         marginTop: 50,
-    }
+    },
+
+    button:{
+        backgroundColor:colors.green,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 16,
+        marginBottom: 30,
+        height: 56,
+        width: 56
+    },
+    buttonIcon:{
+        fontSize: 32,
+        color: colors.white
+ 
+     },
 
 
 })
