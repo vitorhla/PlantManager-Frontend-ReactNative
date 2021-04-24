@@ -1,14 +1,14 @@
 import React from 'react';
 import AppLoading from 'expo-app-loading'
 import Routes from './src/routes/';
-//import {PlantSelect} from './src/pages/PlantSelect/';
+//import { PlantSave } from './src/pages/PlantSave/';
 
 import {
   useFonts,
   Jost_400Regular,
   Jost_600SemiBold
 
-}from '@expo-google-fonts/jost'
+} from '@expo-google-fonts/jost'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -16,17 +16,18 @@ export default function App() {
     Jost_600SemiBold
 
   });
-  
-  if(!fontsLoaded)
-    return<AppLoading />
-    
 
-  return (  
+  if (!fontsLoaded)
+    return <AppLoading />
+
+
+  return (
     <Routes/>
     //< Welcome />
     //< UserIdentification />
     //<Confirmation/>
     //<PlantSelect/>
+    //<PlantSave />
   )
 }
 
