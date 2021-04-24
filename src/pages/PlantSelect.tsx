@@ -90,7 +90,7 @@ async function fetchEnvironment(){
     setEnvironments([
         {
             key:'all',
-            title:'Todos',
+            title:'Todos'
         },
         ...data
        
@@ -123,12 +123,12 @@ useEffect(()=>{
            </View>
            <View>
               <FlatList data={environments}
+                        keyExtractor={(item)=> String(item.key)}
                         renderItem={({item}) =>(
                             <EnvironmentButton
                                 title={item.title}
                                 active={item.key == environmentSelected}
-                                onPress={()=> handleEnvironmentSelected(item.key)}
-                               
+                                onPress={()=> handleEnvironmentSelected(item.key)}   
                             />
                         )}
                         horizontal
@@ -137,9 +137,11 @@ useEffect(()=>{
                     /> 
            </View>
             <View style={styles.plants}>
+
                             
             <FlatList data={filteredPlants} 
-                      renderItem={({item}) =>(
+                        keyExtractor={(item)=> String (item.id)}
+                        renderItem={({item}) =>(
                         <PlantCardPrimary data ={item} />
             )}
                         showsHorizontalScrollIndicator = {false}
