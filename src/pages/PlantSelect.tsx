@@ -1,12 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {View,Text,StyleSheet, FlatList} from 'react-native';
 import colors from '../styles/colors';
 
 import {Header} from '../components/Header';
 import fonts from '../styles/fonts';
-import { EnviromentButton } from '../components/EnviromentButton';
+import { EnvironmentButton } from '../components/EnvironmentButton';
+import api from '../services/api';
+
+interface EnvironmentProps{
+key: string;
+title: string
+
+}
 
 export function PlantSelect(){
+
+const[environments, setEnvironments] =  useState<EnvironmentProps[]>([]);
+
+
+
+useEffect(()=>{
+async function fetchEnvironment(){
+    const {data} = await api.get('plants_environments')
+    setEnvironments([
+        {
+            key:'all',
+            title:'Todos',
+        },
+        ...data
+    ]);
+
+}
+fetchEnvironment();
+},[])
+
+
 
     return(
         <View style={styles.container}>
@@ -22,16 +50,17 @@ export function PlantSelect(){
            </Text>
            </View>
            <View>
-              <FlatList data={[1,2,3,4,5]}
+              <FlatList 
+                    data={environments}
                         renderItem={({item}) =>(
-                            <EnviromentButton
-                                title="Cozinha"
-                                active
+                            <EnvironmentButton
+                                title={item.title}
+                               
                             />
                         )}
                         horizontal
                         showsHorizontalScrollIndicator = {false}
-                        contentContainerStyle={styles.enviromentList}
+                        contentContainerStyle={styles.environmentList}
               /> 
            </View>
         </View>
@@ -64,7 +93,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 30
 
     },
-    enviromentList:{
+    environmentList:{
         height: 40,
         justifyContent: 'center',
         paddingBottom: 5,
