@@ -16,6 +16,10 @@ export function Confirmation(){
 
     const navigation = useNavigation();
 
+    function handleMoveOn(){
+        navigation.navigate('PlantSelect');
+
+    }
     function handleBack(){
         navigation.navigate('UserIdentification');
 
@@ -39,7 +43,11 @@ export function Confirmation(){
             </Text>
 
             <View style = {styles.footer}>
-                <Button title = "Comerçar"/>
+                <Button title = "Comerçar"
+                        onPress={handleMoveOn}
+                
+                />
+                
             </View>
             <View style ={styles.footer}>
 
