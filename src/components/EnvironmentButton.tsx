@@ -19,6 +19,7 @@ active = false,
 
 } : EnvironmentButtonProps){
     return(
+
         <RectButton style={[styles.container, active && styles.conteinerActive]} {...rest}>
 
         <Text style={[styles.text, active && styles.textActive]}>
@@ -38,10 +39,8 @@ container:{
     height: 40,
     justifyContent:'center',
     alignItems:'center',
-    borderRadius: 12,
-    marginRight: 5,
-
-
+    borderRadius: 10,
+    marginEnd:10
 },
 
 conteinerActive:{

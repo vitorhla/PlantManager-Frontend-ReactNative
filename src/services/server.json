@@ -9,6 +9,8 @@
     {"key": "bedroom", "title": "Quarto"},
     {"key": "kitchen", "title": "Cozinha"},
     {"key": "bathroom", "title": "Banheiro"}
+    
+
   ],
 
   "plants": [
@@ -122,6 +124,138 @@
     },
     {
       "id": 10,
+      "name": "Hortênsia",
+      "about": "A hortênsia é uma planta rústica e se adapta a diferentes tipos de solos.",
+      "water_tips": "Mantenha a terra sempre húmida sem encharcar. Regue 1 vez no dia.",
+      "photo": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/2.svg",
+      "environments": ["bathroom"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "day"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Hortênsia",
+      "about": "A hortênsia é uma planta rústica e se adapta a diferentes tipos de solos.",
+      "water_tips": "Mantenha a terra sempre húmida sem encharcar. Regue 1 vez no dia.",
+      "photo": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/2.svg",
+      "environments": ["bathroom"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "day"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Hortênsia",
+      "about": "A hortênsia é uma planta rústica e se adapta a diferentes tipos de solos.",
+      "water_tips": "Mantenha a terra sempre húmida sem encharcar. Regue 1 vez no dia.",
+      "photo": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/2.svg",
+      "environments": ["bathroom"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "day"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Hortênsia",
+      "about": "A hortênsia é uma planta rústica e se adapta a diferentes tipos de solos.",
+      "water_tips": "Mantenha a terra sempre húmida sem encharcar. Regue 1 vez no dia.",
+      "photo": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/2.svg",
+      "environments": ["bathroom"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "day"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Hortênsia",
+      "about": "A hortênsia é uma planta rústica e se adapta a diferentes tipos de solos.",
+      "water_tips": "Mantenha a terra sempre húmida sem encharcar. Regue 1 vez no dia.",
+      "photo": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/2.svg",
+      "environments": ["bathroom"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "day"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Hortênsia",
+      "about": "A hortênsia é uma planta rústica e se adapta a diferentes tipos de solos.",
+      "water_tips": "Mantenha a terra sempre húmida sem encharcar. Regue 1 vez no dia.",
+      "photo": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/2.svg",
+      "environments": ["bathroom"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "day"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Hortênsia",
+      "about": "A hortênsia é uma planta rústica e se adapta a diferentes tipos de solos.",
+      "water_tips": "Mantenha a terra sempre húmida sem encharcar. Regue 1 vez no dia.",
+      "photo": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/2.svg",
+      "environments": ["bathroom"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "day"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Hortênsia",
+      "about": "A hortênsia é uma planta rústica e se adapta a diferentes tipos de solos.",
+      "water_tips": "Mantenha a terra sempre húmida sem encharcar. Regue 1 vez no dia.",
+      "photo": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/2.svg",
+      "environments": ["bathroom"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "day"
+      }
+    },
+    {
+      "id": 18,
+      "name": "Hortênsia",
+      "about": "A hortênsia é uma planta rústica e se adapta a diferentes tipos de solos.",
+      "water_tips": "Mantenha a terra sempre húmida sem encharcar. Regue 1 vez no dia.",
+      "photo": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/2.svg",
+      "environments": ["bathroom"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "day"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Hortênsia",
+      "about": "A hortênsia é uma planta rústica e se adapta a diferentes tipos de solos.",
+      "water_tips": "Mantenha a terra sempre húmida sem encharcar. Regue 1 vez no dia.",
+      "photo": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/2.svg",
+      "environments": ["bathroom"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "day"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Hortênsia",
+      "about": "A hortênsia é uma planta rústica e se adapta a diferentes tipos de solos.",
+      "water_tips": "Mantenha a terra sempre húmida sem encharcar. Regue 1 vez no dia.",
+      "photo": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/2.svg",
+      "environments": ["bathroom"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "day"
+      }
+    },
+    {
+      "id": 21,
       "name": "Hortênsia",
       "about": "A hortênsia é uma planta rústica e se adapta a diferentes tipos de solos.",
       "water_tips": "Mantenha a terra sempre húmida sem encharcar. Regue 1 vez no dia.",
