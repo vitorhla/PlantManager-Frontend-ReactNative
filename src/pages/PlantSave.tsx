@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Image, Text, View,StyleSheet, Platform, Alert } from 'react-native';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
 import {useRoute} from '@react-navigation/core';
@@ -10,7 +10,7 @@ import fonts from '../styles/fonts';
 import DateTimePicker,{Event} from '@react-native-community/datetimepicker';
 import { format, isBefore } from 'date-fns';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { PlantProps } from '../libs/storage';
+import { loadPLant, PlantProps, savePlant } from '../libs/storage';
 
 
 
@@ -32,7 +32,7 @@ function handleChangeTime(event: Event,dateTime: Date | undefined){
     }
     if(dateTime && isBefore(dateTime,new Date())){
         setSelectedDateTime(new Date());
-        return Alert.alert('Escolha uma hora no futuro! ⏰')
+        return Alert.alert('Escolha uma hora no futuro! ⏰');
     }
     if(dateTime)
     setSelectedDateTime(dateTime);
@@ -40,6 +40,26 @@ function handleChangeTime(event: Event,dateTime: Date | undefined){
    function  handleOpenDatetimePickerForAndroid (){
       setShowDatePicker(oldState=> !oldState);
    }
+
+    useEffect(()=>{
+       
+    })
+    async function handleSave(){
+       const data = await loadPLant();
+       return console.log(data);
+     
+        try{
+            await savePlant({
+                ...plant,
+                dateTimeNotification: selectedDateTime
+            });
+
+        }catch{
+            Alert.alert('Não foi possivel salvar. 😥');  
+        }
+       
+    }
+
 
     return (
         <View style={styles.container}>
@@ -96,7 +116,7 @@ function handleChangeTime(event: Event,dateTime: Date | undefined){
 
                 <Button
                     title="Cadastrar planta"
-                    onPress={() => { }}
+                    onPress={handleSave}
 
                 />
             </View>
