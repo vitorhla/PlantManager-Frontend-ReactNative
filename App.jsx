@@ -1,7 +1,7 @@
 import React from 'react';
 import AppLoading from 'expo-app-loading'
-import Routes from './src/routes/';
-//import { PlantSave } from './src/pages/PlantSave/';
+//import Routes from './src/routes/';
+import { MyPlants } from './src/pages/MyPlants/';
 
 import {
   useFonts,
@@ -22,12 +22,13 @@ export default function App() {
 
 
   return (
-    <Routes/>
+    //<Routes/>
     //< Welcome />
     //< UserIdentification />
     //<Confirmation/>
     //<PlantSelect/>
     //<PlantSave />
+    <MyPlants/>
   )
 }
 
