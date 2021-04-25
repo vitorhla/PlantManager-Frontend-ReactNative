@@ -10,23 +10,12 @@ import fonts from '../styles/fonts';
 import DateTimePicker,{Event} from '@react-native-community/datetimepicker';
 import { format, isBefore } from 'date-fns';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { PlantProps } from '../libs/storage';
 
 
 
 interface Params{
-    plant: {
-        id: string;
-    name: string;
-    about: string;
-    water_tips: string;
-    photo: string;
-    environments: [string];
-    frequency: {
-        times: number;
-        repeat_every: string;
-
-    }
-    }
+    plant: PlantProps 
 }
 
 export function PlantSave() {
